@@ -1,5 +1,12 @@
 # korea-investment-trading
-KIS API 기반 자동 매매 시스템
+
+## KIS API 기반 자동 매매 시스템
+
+이 프로젝트는 한투 OpenAPI를 활용한 실시간 주식 자동 매매 시스템입니다. 실시간 시세를 모니터링하고 설정된 조건에 따라 매수 로직을 수행하며, 거래 기록을 CSV 파일로 저장합니다.
+
+### 주요 코드 구성
+
+```python
 import requests  # HTTP 통신을 위한 라이브러리 호출
 import json      # JSON 데이터 처리를 위한 라이브러리 호출
 import yaml      # 설정 파일(yaml) 읽기를 위한 라이브러리 호출
@@ -16,7 +23,7 @@ with open('config.yaml', 'r') as f:
 class AutoTradingSystem:
     def __init__(self, config):  # 클래스 초기화 함수
         self.config = config     # 설정값을 클래스 변수로 저장
-        self.url = "https://openapivts.koreainvestment.com:29443"  # 한투 모의투자 URL 지정
+        self.url = "[https://openapivts.koreainvestment.com:29443](https://openapivts.koreainvestment.com:29443)"  # 한투 모의투자 URL 지정
         self.token = self._get_access_token()  # 클래스 생성 시 토큰을 자동 발급받음
 
     def _get_access_token(self):  # API 인증용 액세스 토큰 발급 함수
